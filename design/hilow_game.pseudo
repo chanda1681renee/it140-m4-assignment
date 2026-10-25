@@ -12,18 +12,55 @@ START hilow_game
 
     # Establish a valid guessing range.
     TODO: Obtain the lower and upper bounds.
+print("Enter lower bound:")
+input(lower_bound)
+print("Enter upper bound:")
+input(upper_bound)
+
     TODO: Repeat as needed until the bounds satisfy the requirement.
+while lower_bound >= upper_bound
+    print("Invalid range. The lower bound must be less than the upper bound.")
+    print("Enter the lower bound for the guessing range:")
+input(upper_bound)
+
 
     # Establish the number the player is trying to guess.
     TODO: Generate the required random number from the valid range.
+secret_number = RANDOM(lower_bound, upper_bound)
 
     # Play the game.
     TODO: Obtain and validate a guess using the selected bounds.
+print("Enter your guess between" + lower_bound "and" + upper_bound + ":"
+input(user_guess)
+
+while user_guess < lower_bound or user_guess > upper_bound
+    print("Your guess is out of bounds. Please enter a valid guess:")
+input(user_guess)
+
+
     TODO: Repeat the required game behavior until the correct guess.
+while user_guess != secret_number
+
         TODO: Compare a valid guess and provide the required feedback.
+if user_guess < secret_number:
+    print("Too low!")
+else:
+    print("Too high!")
+
         TODO: Obtain and validate another guess when play continues.
+print("Enter another guess:")
+input(user_guess)
+
+while user_guess < lower bound or user_guess > upper_bound
+    print("Your guess is out of bounds. Please enter a valid guess:")
+input(user_guess)
+
+# Winning condition reached
+print("Congratulations! You guessed the correct number:" + secret_number)
 
 END hilow_game
 
 # === References ===
 # TODO: Add references for sources you used, or delete this line if unused.
+used the website https://www.geeksforgeeks.org/dsa/how-to-write-a-pseudo-code/
+and the PDF that was provided in the class lesson for help as well as reviewing class materials in this lesson
